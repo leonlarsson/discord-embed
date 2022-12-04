@@ -1,0 +1,3 @@
+name = "embed-worker"
+main = "./index.ts"
+compatibility_date = "2022-12-04"
