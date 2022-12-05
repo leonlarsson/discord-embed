@@ -65,7 +65,10 @@ ${description ? `<meta property="og:description" content="${description}">` : ""
 ${image ? `<meta property="og:image" content="${image}">` : ""}
 ${(large === "true" || large === "1") ? `<meta name="twitter:card" content="summary_large_image">` : ""}
 </head>
-<body>Available URL search params are: color, author, title, description, image, large<br><a href="/create">Interactive mode</a></body></html>`;
+<body>Available URL search params are: color, author, title, description, image, large
+<br><br>
+${author || title || description || color || image || large ? `<b><u>Currently selected properties (paste link in Discord (or anywhere) to see embed):</u></b><br>Color: ${color}<br>Author: ${author}<br>Title: ${title}<br>Description: ${description}<br>Image: ${image}<br>Large: ${large}<br>` : "Check the link below to build an embed, then paste that link in Discord (or anywhere)"}
+<br><a href="/create">Interactive mode</a></body></html>`;
 
         return new Response(html, {
             headers: { "Content-Type": "text/html" }
